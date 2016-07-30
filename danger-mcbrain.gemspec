@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Mcbrain::VERSION
   spec.authors       = ['David Grandinetti']
   spec.email         = ['dbgrandi@yahoo-inc.com']
-  spec.description   = %q{A short description of danger-mcbrain.}
-  spec.summary       = %q{A longer description of danger-mcbrain.}
-  spec.homepage      = 'https://github.com/David Grandinetti/danger-mcbrain'
+  spec.description   = %q{Give Danger some persistent memory.}
+  spec.summary       = %q{Give Danger a redis backed key/value store, so you can extend Danger rules beyond just this PR.}
+  spec.homepage      = 'https://github.com/dbgrandi/danger-mcbrain'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'danger', '~>2.0'
+  spec.add_runtime_dependency 'redis', '~>3.0'
 
   # General ruby development
   spec.add_development_dependency 'bundler', '~> 1.3'
