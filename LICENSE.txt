@@ -1,4 +1,4 @@
-Copyright (c) 2016 David Grandinetti <dbgrandi@yahoo-inc.com>
+Copyright (c) 2016 David Grandinetti <dbgrandi@gmail.com>
 
 MIT License
 

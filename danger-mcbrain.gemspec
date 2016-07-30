@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'danger-mcbrain'
   spec.version       = McBrain::VERSION
   spec.authors       = ['David Grandinetti']
-  spec.email         = ['dbgrandi@yahoo-inc.com']
+  spec.email         = ['dbgrandi@gmail.com']
   spec.description   = %q{Give Danger some persistent memory.}
   spec.summary       = %q{Give Danger a redis backed key/value store, so you can extend Danger rules beyond just this PR.}
   spec.homepage      = 'https://github.com/dbgrandi/danger-mcbrain'
