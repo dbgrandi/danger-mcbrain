@@ -1,9 +1,9 @@
 require File.expand_path('../spec_helper', __FILE__)
 
 module Danger
-  describe Danger::DangerMcbrain do
+  describe Danger::DangerMcBrain do
     it 'should be a plugin' do
-      expect(Danger::DangerMcbrain.new(nil)).to be_a Danger::Plugin
+      expect(Danger::DangerMcBrain.new(nil)).to be_a Danger::Plugin
     end
 
     #
@@ -12,31 +12,27 @@ module Danger
     describe 'with Dangerfile' do
       before do
         @dangerfile = testing_dangerfile
-        @my_plugin = @dangerfile.my_plugin
+        @brain = @dangerfile.brain
       end
 
-      # Some examples for writing tests
-      # You should replace these with your own.
-
-      it "Warns on a monday" do
-        monday_date = Date.parse("2016-07-11")
-        allow(Date).to receive(:today).and_return monday_date
-
-        @my_plugin.warn_on_mondays
-
-        expect(@dangerfile.status_report[:warnings]).to eq(["Trying to merge code on a Monday"])
+      it 'should default to a nil namespace' do
+        expect(@brain.namespace).to be_nil
       end
 
-      it "Does nothing on a tuesday" do
-        monday_date = Date.parse("2016-07-12")
-        allow(Date).to receive(:today).and_return monday_date
-
-        @my_plugin.warn_on_mondays
-
-        expect(@dangerfile.status_report[:warnings]).to eq([])
+      it 'should not use a namespace when it is nil' do
+        @brain.namespace = ''
+        expect(@brain.send(:real_key, 'asdf')).to eql('asdf')
       end
 
+      it 'should not use a namespace when it is an empty string' do
+        @brain.namespace = ''
+        expect(@brain.send(:real_key, 'asdf')).to eql('asdf')
+      end
+
+      it 'should use namespace as a prefix when available' do
+        @brain.namespace = 'pants'
+        expect(@brain.send(:real_key, 'asdf')).to eql('pants:asdf')
+      end
     end
   end
 end
-

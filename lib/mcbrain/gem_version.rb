@@ -1,3 +1,3 @@
-module Mcbrain
-  VERSION = "0.0.1".freeze
+module McBrain
+  VERSION = '0.0.1'.freeze
 end

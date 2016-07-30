@@ -5,7 +5,7 @@ require 'mcbrain/gem_version.rb'
 
 Gem::Specification.new do |spec|
   spec.name          = 'danger-mcbrain'
-  spec.version       = Mcbrain::VERSION
+  spec.version       = McBrain::VERSION
   spec.authors       = ['David Grandinetti']
   spec.email         = ['dbgrandi@yahoo-inc.com']
   spec.description   = %q{Give Danger some persistent memory.}
