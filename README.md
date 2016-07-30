@@ -1,7 +1,7 @@
 # danger-mcbrain
 
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/dbgrandi/danger-mcbrain/blob/master/LICENSE)
-[![Gem](https://img.shields.io/gem/v/danger.svg?style=flat)](http://rubygems.org/gems/danger-mcbrain)
+[![Gem](https://img.shields.io/gem/v/danger-mcbrain.svg?style=flat)](http://rubygems.org/gems/danger-mcbrain)
 
 Give Danger a memory, so she can check your PR today, and then answer questions about it tomorrow. Uses Redis for the persistence.
 
